@@ -1,0 +1,45 @@
+[0.353s] Invoking command in '/home/sshyuk/ros2_ws/src/crawling_sunghyuk': PYTHONPATH=/home/sshyuk/ros2_ws/build/crawling_sunghyuk/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/crawling_sunghyuk build --build-base /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build install --record /home/sshyuk/ros2_ws/build/crawling_sunghyuk/install.log --single-version-externally-managed install_data
+[0.493s] running egg_info
+[0.493s] creating ../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info
+[0.493s] writing ../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/PKG-INFO
+[0.494s] writing dependency_links to ../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/dependency_links.txt
+[0.494s] writing entry points to ../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/entry_points.txt
+[0.494s] writing requirements to ../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/requires.txt
+[0.494s] writing top-level names to ../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/top_level.txt
+[0.494s] writing manifest file '../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/SOURCES.txt'
+[0.495s] reading manifest file '../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/SOURCES.txt'
+[0.495s] writing manifest file '../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/SOURCES.txt'
+[0.495s] running build
+[0.495s] running build_py
+[0.495s] creating /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build
+[0.495s] creating /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build/lib
+[0.496s] creating /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build/lib/scripts
+[0.496s] copying scripts/__init__.py -> /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build/lib/scripts
+[0.496s] copying scripts/gripper_control.py -> /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build/lib/scripts
+[0.496s] creating /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build/lib/crawling_sunghyuk
+[0.496s] copying crawling_sunghyuk/__init__.py -> /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build/lib/crawling_sunghyuk
+[0.496s] copying crawling_sunghyuk/gripper_control.py -> /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build/lib/crawling_sunghyuk
+[0.496s] running install
+[0.496s] running install_lib
+[0.496s] creating /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/scripts
+[0.497s] copying /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build/lib/scripts/__init__.py -> /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/scripts
+[0.497s] copying /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build/lib/scripts/gripper_control.py -> /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/scripts
+[0.497s] creating /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/crawling_sunghyuk
+[0.497s] copying /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build/lib/crawling_sunghyuk/__init__.py -> /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/crawling_sunghyuk
+[0.497s] copying /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build/lib/crawling_sunghyuk/gripper_control.py -> /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/crawling_sunghyuk
+[0.497s] byte-compiling /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/scripts/__init__.py to __init__.cpython-310.pyc
+[0.497s] byte-compiling /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/scripts/gripper_control.py to gripper_control.cpython-310.pyc
+[0.497s] byte-compiling /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/crawling_sunghyuk/__init__.py to __init__.cpython-310.pyc
+[0.497s] byte-compiling /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/crawling_sunghyuk/gripper_control.py to gripper_control.cpython-310.pyc
+[0.497s] running install_data
+[0.497s] creating /home/sshyuk/ros2_ws/install/crawling_sunghyuk/share/ament_index
+[0.497s] creating /home/sshyuk/ros2_ws/install/crawling_sunghyuk/share/ament_index/resource_index
+[0.498s] creating /home/sshyuk/ros2_ws/install/crawling_sunghyuk/share/ament_index/resource_index/packages
+[0.498s] copying resource/crawling_sunghyuk -> /home/sshyuk/ros2_ws/install/crawling_sunghyuk/share/ament_index/resource_index/packages
+[0.498s] copying package.xml -> /home/sshyuk/ros2_ws/install/crawling_sunghyuk/share/crawling_sunghyuk
+[0.498s] running install_egg_info
+[0.499s] Copying ../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info to /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/crawling_sunghyuk-0.0.0-py3.10.egg-info
+[0.499s] running install_scripts
+[0.512s] Installing gripper_control script to /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/crawling_sunghyuk
+[0.512s] writing list of installed files to '/home/sshyuk/ros2_ws/build/crawling_sunghyuk/install.log'
+[0.526s] Invoked command in '/home/sshyuk/ros2_ws/src/crawling_sunghyuk' returned '0': PYTHONPATH=/home/sshyuk/ros2_ws/build/crawling_sunghyuk/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/crawling_sunghyuk build --build-base /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build install --record /home/sshyuk/ros2_ws/build/crawling_sunghyuk/install.log --single-version-externally-managed install_data
