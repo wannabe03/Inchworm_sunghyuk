@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/keyboard/keyboard.egg-info/PKG-INFO
+../../build/keyboard/keyboard.egg-info/SOURCES.txt
+../../build/keyboard/keyboard.egg-info/dependency_links.txt
+../../build/keyboard/keyboard.egg-info/entry_points.txt
+../../build/keyboard/keyboard.egg-info/requires.txt
+../../build/keyboard/keyboard.egg-info/top_level.txt
+../../build/keyboard/keyboard.egg-info/zip-safe
+keyboard/__init__.py
+keyboard/keyboard.py
+resource/keyboard
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

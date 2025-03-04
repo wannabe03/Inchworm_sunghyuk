@@ -2,8 +2,20 @@
 #include "crawling_robot_controller/dynamixel_funtion.h"
 #include <rclcpp/rclcpp.hpp>
 #include <std_msgs/msg/int8_multi_array.hpp>
+#include <std_msgs/msg/int8.hpp>
+#include <cmath>
+
+int g_keyboard_command =0;
+bool move_forward = false;
 
 rclcpp::Publisher<std_msgs::msg::Int8MultiArray>::SharedPtr gripper_state_pub;
+
+void keyboard_callback(const std_msgs::msg::Int8::SharedPtr msg)
+{
+    if (msg->data == 3) {
+        move_forward = !move_forward; 
+    }
+}
 
 void IK_2dim(double x, double y)
 {
@@ -78,27 +90,36 @@ int main(int argc, char **argv)
 
     gripper_state_pub = node->create_publisher<std_msgs::msg::Int8MultiArray>("gripper_state", 10);
 
+    auto keyboard_sub = node->create_subscription<std_msgs::msg::Int8>("keyboard_topic", 10, keyboard_callback);
+
     CONNECT_dynamixel();
     SET_dynamixel();
     
     while (rclcpp::ok()) 
     {
-        path();
-        IK_2dim(x_ee, y_ee);
-        BASE_position_control(base_B_ref_pos, base_A_ref_pos);
-        ELBOW_position_control(elbow_ref_pos);
-        EE_position_control(ee_A_ref_pos, ee_B_ref_pos);
-
-        RCLCPP_INFO(rclcpp::get_logger("position_control"), "ID0 : %f | ID1 : %f | ID2 : %f | ID3 : %f | ID4 : %f | Grip : Base Open: %s, EE Open: %s", 
-        base_B_now_pos * 180 / M_PI,
-        base_A_now_pos * 180 / M_PI,
-        elbow_now_pos * 180 / M_PI,
-        ee_A_now_pos * 180 / M_PI,
-        ee_B_now_pos * 180 / M_PI,
-        BASEisOpend ? "True" : "False",
-        EEisOpend ? "True" : "False");
-
         rclcpp::spin_some(node);
+        if (move_forward)
+        {
+            path();
+            IK_2dim(x_ee, y_ee);
+            BASE_position_control(base_B_ref_pos, base_A_ref_pos);
+            ELBOW_position_control(elbow_ref_pos);
+            EE_position_control(ee_A_ref_pos, ee_B_ref_pos);
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "ID0 : %f | ID1 : %f | ID2 : %f | ID3 : %f | ID4 : %f | Grip : Base Open: %s, EE Open: %s", 
+            base_B_now_pos * 180 / M_PI,
+            base_A_now_pos * 180 / M_PI,
+            elbow_now_pos * 180 / M_PI,
+            ee_A_now_pos * 180 / M_PI,
+            ee_B_now_pos * 180 / M_PI,
+            BASEisOpend ? "True" : "False",
+            EEisOpend ? "True" : "False");
+        }
+
+        else
+        {
+            RCLCPP_INFO(rclcpp::get_logger("position_control"),"waiting for command");
+        }
+
         loop_rate.sleep();
     }
 

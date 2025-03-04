@@ -1,0 +1,36 @@
+[0.557s] Invoking command in '/home/sshyuk/ros2_ws/src/keyboard': PYTHONPATH=/home/sshyuk/ros2_ws/build/keyboard/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sshyuk/ros2_ws/install/keyboard/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/keyboard build --build-base /home/sshyuk/ros2_ws/build/keyboard/build install --record /home/sshyuk/ros2_ws/build/keyboard/install.log --single-version-externally-managed install_data
+[0.706s] running egg_info
+[0.707s] creating ../../build/keyboard/keyboard.egg-info
+[0.707s] writing ../../build/keyboard/keyboard.egg-info/PKG-INFO
+[0.708s] writing dependency_links to ../../build/keyboard/keyboard.egg-info/dependency_links.txt
+[0.708s] writing entry points to ../../build/keyboard/keyboard.egg-info/entry_points.txt
+[0.708s] writing requirements to ../../build/keyboard/keyboard.egg-info/requires.txt
+[0.708s] writing top-level names to ../../build/keyboard/keyboard.egg-info/top_level.txt
+[0.708s] writing manifest file '../../build/keyboard/keyboard.egg-info/SOURCES.txt'
+[0.709s] reading manifest file '../../build/keyboard/keyboard.egg-info/SOURCES.txt'
+[0.709s] writing manifest file '../../build/keyboard/keyboard.egg-info/SOURCES.txt'
+[0.709s] running build
+[0.709s] running build_py
+[0.709s] creating /home/sshyuk/ros2_ws/build/keyboard/build
+[0.709s] creating /home/sshyuk/ros2_ws/build/keyboard/build/lib
+[0.709s] creating /home/sshyuk/ros2_ws/build/keyboard/build/lib/keyboard
+[0.709s] copying keyboard/__init__.py -> /home/sshyuk/ros2_ws/build/keyboard/build/lib/keyboard
+[0.709s] copying keyboard/keyboard.py -> /home/sshyuk/ros2_ws/build/keyboard/build/lib/keyboard
+[0.709s] running install
+[0.710s] running install_lib
+[0.710s] creating /home/sshyuk/ros2_ws/install/keyboard/lib/python3.10/site-packages/keyboard
+[0.710s] copying /home/sshyuk/ros2_ws/build/keyboard/build/lib/keyboard/__init__.py -> /home/sshyuk/ros2_ws/install/keyboard/lib/python3.10/site-packages/keyboard
+[0.710s] copying /home/sshyuk/ros2_ws/build/keyboard/build/lib/keyboard/keyboard.py -> /home/sshyuk/ros2_ws/install/keyboard/lib/python3.10/site-packages/keyboard
+[0.710s] byte-compiling /home/sshyuk/ros2_ws/install/keyboard/lib/python3.10/site-packages/keyboard/__init__.py to __init__.cpython-310.pyc
+[0.710s] byte-compiling /home/sshyuk/ros2_ws/install/keyboard/lib/python3.10/site-packages/keyboard/keyboard.py to keyboard.cpython-310.pyc
+[0.711s] running install_data
+[0.711s] creating /home/sshyuk/ros2_ws/install/keyboard/share/ament_index
+[0.711s] creating /home/sshyuk/ros2_ws/install/keyboard/share/ament_index/resource_index
+[0.711s] creating /home/sshyuk/ros2_ws/install/keyboard/share/ament_index/resource_index/packages
+[0.711s] copying resource/keyboard -> /home/sshyuk/ros2_ws/install/keyboard/share/ament_index/resource_index/packages
+[0.711s] copying package.xml -> /home/sshyuk/ros2_ws/install/keyboard/share/keyboard
+[0.711s] running install_egg_info
+[0.713s] Copying ../../build/keyboard/keyboard.egg-info to /home/sshyuk/ros2_ws/install/keyboard/lib/python3.10/site-packages/keyboard-0.0.0-py3.10.egg-info
+[0.713s] running install_scripts
+[0.726s] writing list of installed files to '/home/sshyuk/ros2_ws/build/keyboard/install.log'
+[0.742s] Invoked command in '/home/sshyuk/ros2_ws/src/keyboard' returned '0': PYTHONPATH=/home/sshyuk/ros2_ws/build/keyboard/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sshyuk/ros2_ws/install/keyboard/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/keyboard build --build-base /home/sshyuk/ros2_ws/build/keyboard/build install --record /home/sshyuk/ros2_ws/build/keyboard/install.log --single-version-externally-managed install_data

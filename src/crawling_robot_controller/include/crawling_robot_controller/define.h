@@ -28,7 +28,7 @@
 #define d 0.065 // [m]
 
 // System values
-#define DEVICENAME "/dev/ttyUSB1"
+#define DEVICENAME "/dev/ttyUSB0"
 #define loop_hz 100
 
 
