@@ -1,0 +1,38 @@
+[0.013s] Invoking command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20
+[0.168s] [35m[1mConsolidate compiler generated dependencies of target position_control[0m
+[0.168s] [ 50%] [32mBuilding CXX object CMakeFiles/position_control.dir/src/position_control.cpp.o[0m
+[1.495s] In file included from [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:2[m[K:
+[1.495s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/dynamixel_funtion.h:[m[K In function ‘[01m[Kvoid SET_dynamixel()[m[K’:
+[1.495s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/dynamixel_funtion.h:21:80:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_GOAL_POSITION[m[K’ was not declared in this scope
+[1.495s]    21 |     groupSyncWrite = new dynamixel::GroupSyncWrite(portHandler, packetHandler, [01;31m[KADDR_GOAL_POSITION[m[K, 4);
+[1.495s]       |                                                                                [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[1.499s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/dynamixel_funtion.h:22:78:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_PRESENT_POSITION[m[K’ was not declared in this scope
+[1.500s]    22 |     groupSyncRead = new dynamixel::GroupSyncRead(portHandler, packetHandler, [01;31m[KADDR_PRESENT_POSITION[m[K, 4);
+[1.500s]       |                                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.503s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/dynamixel_funtion.h:24:62:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_OPERATING_MODE[m[K’ was not declared in this scope
+[1.503s]    24 |     packetHandler->write1ByteTxRx(portHandler, BASE_MOTOR_B, [01;31m[KADDR_OPERATING_MODE[m[K, 3, nullptr);
+[1.503s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.506s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/dynamixel_funtion.h:25:82:[m[K [01;31m[Kerror: [m[K‘[01m[KTORQUE_ENABLE[m[K’ was not declared in this scope; did you mean ‘[01m[KADDR_TORQUE_ENABLE[m[K’?
+[1.506s]    25 |     packetHandler->write1ByteTxRx(portHandler, BASE_MOTOR_B, ADDR_TORQUE_ENABLE, [01;31m[KTORQUE_ENABLE[m[K, nullptr);
+[1.506s]       |                                                                                  [01;31m[K^~~~~~~~~~~~~[m[K
+[1.507s]       |                                                                                  [32m[KADDR_TORQUE_ENABLE[m[K
+[1.509s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/dynamixel_funtion.h:[m[K In function ‘[01m[Kvoid KILL_dynamixel()[m[K’:
+[1.509s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/dynamixel_funtion.h:40:82:[m[K [01;31m[Kerror: [m[K‘[01m[KTORQUE_DISABLE[m[K’ was not declared in this scope
+[1.509s]    40 |     packetHandler->write1ByteTxRx(portHandler, BASE_MOTOR_B, ADDR_TORQUE_ENABLE, [01;31m[KTORQUE_DISABLE[m[K, nullptr);
+[1.509s]       |                                                                                  [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.514s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/dynamixel_funtion.h:[m[K In function ‘[01m[Kvoid BASE_position_control(double, double)[m[K’:
+[1.514s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/dynamixel_funtion.h:81:73:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_PRESENT_POSITION[m[K’ was not declared in this scope
+[1.514s]    81 |     uint32_t base_B_now_pos_step = groupSyncRead->getData(BASE_MOTOR_B, [01;31m[KADDR_PRESENT_POSITION[m[K, 4);
+[1.514s]       |                                                                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.518s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/dynamixel_funtion.h:[m[K In function ‘[01m[Kvoid ELBOW_position_control(double)[m[K’:
+[1.518s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/dynamixel_funtion.h:106:72:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_PRESENT_POSITION[m[K’ was not declared in this scope
+[1.519s]   106 |     uint32_t elbow_now_pos_step = groupSyncRead->getData(XC330_DXL_ID, [01;31m[KADDR_PRESENT_POSITION[m[K, 4);
+[1.519s]       |                                                                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.523s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/dynamixel_funtion.h:[m[K In function ‘[01m[Kvoid EE_position_control(double, double)[m[K’:
+[1.523s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/dynamixel_funtion.h:138:69:[m[K [01;31m[Kerror: [m[K‘[01m[KADDR_PRESENT_POSITION[m[K’ was not declared in this scope
+[1.523s]   138 |     uint32_t ee_A_now_pos_step = groupSyncRead->getData(EE_MOTOR_A, [01;31m[KADDR_PRESENT_POSITION[m[K, 4);
+[1.523s]       |                                                                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[3.181s] gmake[2]: *** [CMakeFiles/position_control.dir/build.make:76: CMakeFiles/position_control.dir/src/position_control.cpp.o] Error 1
+[3.181s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/position_control.dir/all] Error 2
+[3.181s] gmake: *** [Makefile:146: all] Error 2
+[3.184s] Invoked command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20

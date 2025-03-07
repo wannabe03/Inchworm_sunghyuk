@@ -7,13 +7,39 @@
 
 int g_keyboard_command =0;
 bool move_forward = false;
+bool move_backward = false;
 
+size_t target_index = 1;
+double x_ee = points[0].first;
+double y_ee = points[0].second;
 rclcpp::Publisher<std_msgs::msg::Int8MultiArray>::SharedPtr gripper_state_pub;
+// rclccp::Subscription<std_msgs::msg::Int8>::SharedPtr keyboard_sub; //auto 대신 쓸 수 있는 문구
+
+
 
 void keyboard_callback(const std_msgs::msg::Int8::SharedPtr msg)
 {
     if (msg->data == 3) {
-        move_forward = !move_forward; 
+        if (!move_forward) { 
+            move_backward = false;
+            move_forward = true;
+            x_ee = points[0].first;
+            y_ee = points[0].second;
+        } else {
+
+            move_forward = false;
+        }
+    }
+
+    else if (msg->data == 4) {
+        if (!move_backward) { 
+            move_forward = false;
+            move_backward = true;
+            x_ee = points2[0].first;
+            y_ee = points2[0].second;
+        } else {
+            move_backward = false;
+        }
     }
 }
 
@@ -49,9 +75,19 @@ void path()
     }
 
     if (target_index < points.size()) 
-    {
-        x_target = points[target_index].first;
-        y_target = points[target_index].second;
+    {   
+        if(move_forward)
+        {
+            x_target = points[target_index].first;
+            y_target = points[target_index].second;
+        }
+
+        else if(move_backward)
+        {
+            x_target = points2[target_index].first;
+            y_target = points2[target_index].second;
+        }
+
         distance = sqrt(pow(x_target - x_ee, 2) + pow(y_target - y_ee, 2));
 
         if (distance > step_size) 
@@ -65,10 +101,10 @@ void path()
         }
 
         if ((previous_index == 3 && target_index == 4) || (previous_index == 6 && target_index == 0)) delay_active = true;
-
         BASEisOpend = target_index >= 4;
         EEisOpend = target_index < 4;
 
+        
         std_msgs::msg::Int8MultiArray gripper_state_msg;
         gripper_state_msg.data.resize(2);
         gripper_state_msg.data[0] = BASEisOpend ? 1 : 0;
@@ -98,7 +134,7 @@ int main(int argc, char **argv)
     while (rclcpp::ok()) 
     {
         rclcpp::spin_some(node);
-        if (move_forward)
+        if (move_forward||move_backward)
         {
             path();
             IK_2dim(x_ee, y_ee);
@@ -126,3 +162,4 @@ int main(int argc, char **argv)
     KILL_dynamixel(); 
     return 0;
 }
+

@@ -16,7 +16,7 @@
 //   <---> <-------> <-------> <--->
 // 
 //  {0}__{1}_______{2}_______{3}__{4}      
-//   |            elbow            |     
+//   |            elbow            |     a
 //   d                             d      
 //   |                             |       
 //  ---                           --- 
@@ -44,7 +44,7 @@
 // Common Dynamixel values
 #define PPR 4096
 #define PROTOCOL_VERSION 2.0
-#define ADDR_TORQUE_ENABLE 64  
+#define ADDR_TORQUE_ENABLE 64 
 #define ADDR_GOAL_POSITION 116  
 #define ADDR_PRESENT_POSITION 132  
 #define ADDR_OPERATING_MODE 11  
@@ -75,11 +75,12 @@ std::vector<std::pair<double, double>> points =
     {
         {0.17, 0.0}, {0.17, 0.1}, {0.22, 0.12}, {0.22, 0.0}, {0.22, -0.12}, {0.17, -0.1}, {0.17, 0.0}
     };
+std::vector<std::pair<double, double>> points2 = 
+    {
+        {0.22, 0.0}, {0.22, 0.10}, {0.17, 0.12}, {0.17, 0.0}, {0.17, -0.12}, {0.22, -0.1}, {0.22, 0.0}
+    };
 
-double x_ee=points[0].first;
-double y_ee=points[0].second;
 
-size_t target_index = 1;
 double x_target = 0;
 double y_target = 0;
 double step_size = 0.005;

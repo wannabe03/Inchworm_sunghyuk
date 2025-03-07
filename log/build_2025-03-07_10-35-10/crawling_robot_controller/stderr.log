@@ -1,0 +1,6 @@
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:29:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+   29 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/position_control.dir/build.make:76: CMakeFiles/position_control.dir/src/position_control.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/position_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

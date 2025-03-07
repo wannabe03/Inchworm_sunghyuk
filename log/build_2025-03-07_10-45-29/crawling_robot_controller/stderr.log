@@ -1,0 +1,20 @@
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid path()[m[K’:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:51:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_index[m[K’ was not declared in this scope
+   51 |     if ([01;31m[Ktarget_index[m[K < points.size())
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:55:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_ee[m[K’ was not declared in this scope
+   55 |         distance = sqrt(pow(x_target - [01;31m[Kx_ee[m[K, 2) + pow(y_target - y_ee, 2));
+      |                                        [01;31m[K^~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:55:66:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_ee[m[K’ was not declared in this scope
+   55 |         distance = sqrt(pow(x_target - x_ee, 2) + pow(y_target - [01;31m[Ky_ee[m[K, 2));
+      |                                                                  [01;31m[K^~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:104:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_ee[m[K’ was not declared in this scope
+  104 |             IK_2dim([01;31m[Kx_ee[m[K, y_ee);
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:104:27:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_ee[m[K’ was not declared in this scope
+  104 |             IK_2dim(x_ee, [01;31m[Ky_ee[m[K);
+      |                           [01;31m[K^~~~[m[K
+gmake[2]: *** [CMakeFiles/position_control.dir/build.make:76: CMakeFiles/position_control.dir/src/position_control.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/position_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

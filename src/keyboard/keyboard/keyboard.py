@@ -36,7 +36,6 @@ class KeyboardTeleop(Node):
                 elif key == '\x1b[D':
                     command = 4
                 elif key == '\x03':
-                    self.get_logger().info("Shutting down node..")
                     rclpy.shutdown()
                     return
 
@@ -48,23 +47,15 @@ class KeyboardTeleop(Node):
         finally:
             termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.settings)
 
-    def destroy_node(self):
-        self.destroy_publisher(self.publisher_)
-        super().destroy_node()
-
 
 
 def main(args=None):
     rclpy.init(args=args)
     node = KeyboardTeleop()
-
-    try: 
-        rclpy.spin(node)
-    except KeyboardInterrupt:
-        node.get_logger().info("Shutting down keyboard control")
-    finally:
-        node.destroy_node()
-        rclpy.shutdown()
+    rclpy.spin(node)
+    node.get_logger().info("Shutting down keyboard control")
+    node.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__=='__main__':

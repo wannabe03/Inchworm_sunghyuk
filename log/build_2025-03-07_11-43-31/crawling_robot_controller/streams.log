@@ -1,0 +1,26 @@
+[0.011s] Invoking command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20
+[0.167s] [35m[1mConsolidate compiler generated dependencies of target position_control[0m
+[0.167s] [ 50%] [32mBuilding CXX object CMakeFiles/position_control.dir/src/position_control.cpp.o[0m
+[5.340s] [100%] [32m[1mLinking CXX executable position_control[0m
+[5.610s] [100%] Built target position_control
+[5.620s] Invoked command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20
+[5.632s] Invoking command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --install /home/sshyuk/ros2_ws/build/crawling_robot_controller
+[5.641s] -- Install configuration: ""
+[5.641s] -- Installing: /home/sshyuk/ros2_ws/install/crawling_robot_controller/lib/crawling_robot_controller/position_control
+[5.645s] -- Set runtime path of "/home/sshyuk/ros2_ws/install/crawling_robot_controller/lib/crawling_robot_controller/position_control" to ""
+[5.645s] -- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/ament_index/resource_index/package_run_dependencies/crawling_robot_controller
+[5.645s] -- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/ament_index/resource_index/parent_prefix_path/crawling_robot_controller
+[5.645s] -- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/environment/ament_prefix_path.sh
+[5.645s] -- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/environment/ament_prefix_path.dsv
+[5.645s] -- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/environment/path.sh
+[5.645s] -- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/environment/path.dsv
+[5.645s] -- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/local_setup.bash
+[5.645s] -- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/local_setup.sh
+[5.646s] -- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/local_setup.zsh
+[5.646s] -- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/local_setup.dsv
+[5.646s] -- Installing: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/package.dsv
+[5.646s] -- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/ament_index/resource_index/packages/crawling_robot_controller
+[5.646s] -- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/cmake/crawling_robot_controllerConfig.cmake
+[5.646s] -- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/cmake/crawling_robot_controllerConfig-version.cmake
+[5.646s] -- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/package.xml
+[5.647s] Invoked command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --install /home/sshyuk/ros2_ws/build/crawling_robot_controller
