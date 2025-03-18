@@ -1,0 +1,16 @@
+[0.012s] Invoking command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20
+[0.168s] [35m[1mConsolidate compiler generated dependencies of target position_control[0m
+[0.168s] [ 50%] [32mBuilding CXX object CMakeFiles/position_control.dir/src/position_control.cpp.o[0m
+[1.469s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid IK_2dim(double, double)[m[K’:
+[1.469s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:48:5:[m[K [01;31m[Kerror: [m[K‘[01m[KRCCPP_INFO[m[K’ was not declared in this scope; did you mean ‘[01m[KRCLCPP_INFO[m[K’?
+[1.469s]    48 |     [01;31m[KRCCPP_INFO[m[K(rclcpp::get_logger("position_control"), "theta1 : %f | theta2 : %f | theta3 : %f", theta1, theta2, theta3);
+[1.469s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.469s]       |     [32m[KRCLCPP_INFO[m[K
+[1.470s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid path()[m[K’:
+[1.470s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:82:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<double, double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[1.470s]    82 |     if ([01;35m[Ktarget_index < points.size()[m[K)
+[1.470s]       |         [01;35m[K~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+[3.057s] gmake[2]: *** [CMakeFiles/position_control.dir/build.make:76: CMakeFiles/position_control.dir/src/position_control.cpp.o] Error 1
+[3.057s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/position_control.dir/all] Error 2
+[3.057s] gmake: *** [Makefile:146: all] Error 2
+[3.059s] Invoked command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20

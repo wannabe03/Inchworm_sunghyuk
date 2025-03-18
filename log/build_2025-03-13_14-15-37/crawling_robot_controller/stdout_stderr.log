@@ -1,0 +1,33 @@
+[35m[1mConsolidate compiler generated dependencies of target position_control[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/position_control.dir/src/position_control.cpp.o[0m
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid keyboard_callback(std_msgs::msg::Int8_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:22:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_index[m[K’ was not declared in this scope
+   22 |         [01;31m[Ktarget_index[m[K = 0;
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:23:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_ee[m[K’ was not declared in this scope
+   23 |         [01;31m[Kx_ee[m[K = 0;
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:24:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_ee[m[K’ was not declared in this scope
+   24 |         [01;31m[Ky_ee[m[K = 0;
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid path()[m[K’:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:60:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_index[m[K’ was not declared in this scope
+   60 |     if ([01;31m[Ktarget_index[m[K < points.size())
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:64:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_ee[m[K’ was not declared in this scope
+   64 |         distance = sqrt(pow(x_target - [01;31m[Kx_ee[m[K, 2) + pow(y_target - y_ee, 2));
+      |                                        [01;31m[K^~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:64:66:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_ee[m[K’ was not declared in this scope
+   64 |  sqrt(pow(x_target - x_ee, 2) + pow(y_target - [01;31m[Ky_ee[m[K, 2));
+      |                                                [01;31m[K^~~~[m[K
+
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:110:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_ee[m[K’ was not declared in this scope
+  110 |         IK_2dim([01;31m[Kx_ee[m[K, y_ee);
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:110:23:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_ee[m[K’ was not declared in this scope
+  110 |         IK_2dim(x_ee, [01;31m[Ky_ee[m[K);
+      |                       [01;31m[K^~~~[m[K
+gmake[2]: *** [CMakeFiles/position_control.dir/build.make:76: CMakeFiles/position_control.dir/src/position_control.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/position_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

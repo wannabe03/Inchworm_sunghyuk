@@ -9,7 +9,7 @@ class GripperControl(Node):
         self.get_logger().info("Gripper control node has started!")
 
         # 시리얼 포트 설정
-        self.arduino_serial = serial.Serial('/dev/ttyACM0', 115200, timeout=1)
+        self.arduino_serial = serial.Serial('/dev/ttyACM0', 1000000, timeout=1)
 
         # ROS2 Subscriber 생성
         self.subscription = self.create_subscription(

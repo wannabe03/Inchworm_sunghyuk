@@ -6,7 +6,7 @@ import sys,select,termios, tty
 class KeyboardTeleop(Node):
     def __init__(self):
         super().__init__('keyboard_teleop')
-        self.publisher_=self.create_publisher(Int8,'keyboard_topic',10)
+        self.publisher_=self.create_publisher(Int8,'keyboard',10)
         self.get_logger().info("Keyboard Node started! Use arrow keys for command")
         self.settings = termios.tcgetattr(sys.stdin)
         self.timer =self.create_timer(0.1, self.timer_callback)
@@ -25,8 +25,8 @@ class KeyboardTeleop(Node):
     def timer_callback(self):
         try:
             key = self.get_key()
+            command = 0
             if key:
-                command = None
                 if key == '\x1b[A':
                     command = 1
                 elif key == '\x1b[B':
@@ -35,15 +35,17 @@ class KeyboardTeleop(Node):
                     command = 3
                 elif key == '\x1b[D':
                     command = 4
+                elif key == 'm':
+                    command = 5
                 elif key == '\x03':
                     rclpy.shutdown()
                     return
-
-                if command is not None:
-                    msg = Int8()
-                    msg.data = command
-                    self.publisher_.publish(msg)
-                    self.get_logger().info('Publishing: {}'.format(command))
+                    
+            msg = Int8()
+            msg.data = command
+            self.publisher_.publish(msg)
+            self.get_logger().info('Publishing: {}'.format(command))
+            
         finally:
             termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.settings)
 

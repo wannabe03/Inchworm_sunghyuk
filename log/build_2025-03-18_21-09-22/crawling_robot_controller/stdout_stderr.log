@@ -1,0 +1,32 @@
+[35m[1mConsolidate compiler generated dependencies of target position_control[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/position_control.dir/src/position_control.cpp.o[0m
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid path()[m[K’:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:75:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<double, double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   75 |     if ([01;35m[Ktarget_index < points.size()[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:91:18:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmisleading-indentation-Wmisleading-indentation]8;;[m[K]
+   91 |             else [01;35m[Kif[m[K(move_backward)
+      |                  [01;35m[K^~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:93:17:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+   93 |                 [01;36m[Ktarget_index[m[K = target_index < 1 ? points.size() - 1 : target_index;
+      |                 [01;36m[K^~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable position_control[0m
+[100%] Built target position_control
+-- Install configuration: ""
+-- Installing: /home/sshyuk/ros2_ws/install/crawling_robot_controller/lib/crawling_robot_controller/position_control
+-- Set runtime path of "/home/sshyuk/ros2_ws/install/crawling_robot_controller/lib/crawling_robot_controller/position_control" to ""
+-- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/ament_index/resource_index/package_run_dependencies/crawling_robot_controller
+-- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/ament_index/resource_index/parent_prefix_path/crawling_robot_controller
+-- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/environment/ament_prefix_path.sh
+-- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/environment/path.sh
+-- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/environment/path.dsv
+-- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/local_setup.bash
+-- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/local_setup.sh
+-- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/local_setup.zsh
+-- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/local_setup.dsv
+-- Installing: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/package.dsv
+-- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/ament_index/resource_index/packages/crawling_robot_controller
+-- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/cmake/crawling_robot_controllerConfig.cmake
+-- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/cmake/crawling_robot_controllerConfig-version.cmake
+-- Up-to-date: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/package.xml

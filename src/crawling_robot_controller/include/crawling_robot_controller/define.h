@@ -16,16 +16,16 @@
 //   <---> <-------> <-------> <--->
 // 
 //  {0}__{1}_______{2}_______{3}__{4}      
-//   |            elbow            |     a
+//   |            elbow            |     
 //   d                             d      
 //   |                             |       
 //  ---                           --- 
 //  base                          E.E.
 //_______________________________________
 
-#define l 0.025 // [m] 
-#define L 0.130 // [m]
-#define d 0.065 // [m]
+// #define l 0.025 // [m] 
+#define L 0.130 // [m] 0.310+0.130 = 0.44.
+#define d 0.05 // [m]
 
 // System values
 #define DEVICENAME "/dev/ttyUSB0"
@@ -33,12 +33,10 @@
 
 
 // Dynamixel setting (Custom)
-#define BAUDRATE 115200
-#define BASE_MOTOR_B 0 
-#define BASE_MOTOR_A 1
+#define BAUDRATE 1000000 // 보드 레이트 1Mbps로 변경
+#define BASE_MOTOR 1
 #define XC330_DXL_ID 2
-#define EE_MOTOR_A 3   
-#define EE_MOTOR_B 4 
+#define EE_MOTOR 3
   
 
 // Common Dynamixel values
@@ -56,34 +54,38 @@
 dynamixel::PortHandler *portHandler;
 dynamixel::PacketHandler *packetHandler;
 
-double base_B_ref_pos = 0;
-double base_A_ref_pos = 0;
+double base_ref_pos = 0;
 double elbow_ref_pos = 0;
-double ee_A_ref_pos = 0;
-double ee_B_ref_pos = 0;
+double ee_ref_pos = 0;
 
-double base_B_now_pos = 0;
-double base_A_now_pos = 0;
+double base_now_pos = 0;
 double elbow_now_pos = 0;
-double ee_A_now_pos = 0;
-double ee_B_now_pos = 0;
+double ee_now_pos = 0;
 
 int BASEisOpend = 0;
 int EEisOpend = 1;
 
 std::vector<std::pair<double, double>> points = 
     {
-        {0.17, 0.0}, {0.17, 0.1}, {0.22, 0.12}, {0.22, 0.0}, {0.22, -0.12}, {0.17, -0.1}, {0.17, 0.0}
+        {0.185, 0.0}, {0.185, 0.1}, {0.22, 0.12}, {0.22, 0.0}, {0.22, -0.12}, {0.185, -0.1}, {0.185, 0.0}
     };
-std::vector<std::pair<double, double>> points2 = 
-    {
-        {0.22, 0.0}, {0.22, 0.10}, {0.17, 0.12}, {0.17, 0.0}, {0.17, -0.12}, {0.22, -0.1}, {0.22, 0.0}
-    };
+// std::vector<std::pair<double, double>> points2 = 
+//     {
+//         {0.22, 0.0}, {0.17, 0.10}, {0.15, 0.15}, {0.15, 0.17}, {0.15, 0.15}, {0.17, 0.10}, {0.22, 0.0}
+//     };
+    
+// 팔길이가 0.26m 이기에 x가 0.22m일때 y의 한계는 0.138m 
+ 
 
-
+double x_ee = points[0].first;
+double y_ee = points[0].second;
 double x_target = 0;
 double y_target = 0;
 double step_size = 0.005;
 double distance = 0;
+
+bool move_forward = false;
+bool move_backward = false;
+bool move_stop = false;
 
 #endif // DEFINE

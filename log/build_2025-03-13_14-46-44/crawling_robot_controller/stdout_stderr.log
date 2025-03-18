@@ -1,0 +1,19 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/position_control.dir/src/position_control.cpp.o[0m
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid keyboard_callback(std_msgs::msg::Int8_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:26:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_ee[m[K’ was not declared in this scope
+   26 |         [01;31m[Kx_ee[m[K = 0;
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:27:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_ee[m[K’ was not declared in this scope
+   27 |         [01;31m[Ky_ee[m[K = 0;
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid path()[m[K’:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:66:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_ee[m[K’ was not declared in this scope
+   66 |         distance = sqrt(pow(x_target - [01;31m[Kx_ee[m[K, 2) + pow(y_target - y_ee, 2));
+      |                                        [01;31m[K^~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:66:66:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_ee[m[K’ was not declared in this scope
+   66 |  sqrt(pow(x_target - x_ee, 2) + pow(y_target - [01;31m[Ky_ee[m[K, 2));
+      |                                                [01;31m[K^~~~[m[K
+
+gmake[2]: *** [CMakeFiles/position_control.dir/build.make:76: CMakeFiles/position_control.dir/src/position_control.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/position_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

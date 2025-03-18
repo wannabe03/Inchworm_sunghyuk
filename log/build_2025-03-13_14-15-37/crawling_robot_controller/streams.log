@@ -1,0 +1,35 @@
+[0.014s] Invoking command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20
+[0.174s] [35m[1mConsolidate compiler generated dependencies of target position_control[0m
+[0.174s] [ 50%] [32mBuilding CXX object CMakeFiles/position_control.dir/src/position_control.cpp.o[0m
+[1.518s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid keyboard_callback(std_msgs::msg::Int8_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.518s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:22:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_index[m[K’ was not declared in this scope
+[1.518s]    22 |         [01;31m[Ktarget_index[m[K = 0;
+[1.518s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[1.520s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:23:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_ee[m[K’ was not declared in this scope
+[1.520s]    23 |         [01;31m[Kx_ee[m[K = 0;
+[1.520s]       |         [01;31m[K^~~~[m[K
+[1.522s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:24:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_ee[m[K’ was not declared in this scope
+[1.522s]    24 |         [01;31m[Ky_ee[m[K = 0;
+[1.522s]       |         [01;31m[K^~~~[m[K
+[1.525s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid path()[m[K’:
+[1.525s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:60:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_index[m[K’ was not declared in this scope
+[1.525s]    60 |     if ([01;31m[Ktarget_index[m[K < points.size())
+[1.525s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[1.527s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:64:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_ee[m[K’ was not declared in this scope
+[1.527s]    64 |         distance = sqrt(pow(x_target - [01;31m[Kx_ee[m[K, 2) + pow(y_target - y_ee, 2));
+[1.527s]       |                                        [01;31m[K^~~~[m[K
+[1.529s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:64:66:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_ee[m[K’ was not declared in this scope
+[1.529s]    64 |  sqrt(pow(x_target - x_ee, 2) + pow(y_target - [01;31m[Ky_ee[m[K, 2));
+[1.529s]       |                                                [01;31m[K^~~~[m[K
+[1.529s] 
+[1.559s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.560s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:110:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_ee[m[K’ was not declared in this scope
+[1.560s]   110 |         IK_2dim([01;31m[Kx_ee[m[K, y_ee);
+[1.560s]       |                 [01;31m[K^~~~[m[K
+[1.561s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:110:23:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_ee[m[K’ was not declared in this scope
+[1.561s]   110 |         IK_2dim(x_ee, [01;31m[Ky_ee[m[K);
+[1.562s]       |                       [01;31m[K^~~~[m[K
+[3.185s] gmake[2]: *** [CMakeFiles/position_control.dir/build.make:76: CMakeFiles/position_control.dir/src/position_control.cpp.o] Error 1
+[3.185s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/position_control.dir/all] Error 2
+[3.185s] gmake: *** [Makefile:146: all] Error 2
+[3.187s] Invoked command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20

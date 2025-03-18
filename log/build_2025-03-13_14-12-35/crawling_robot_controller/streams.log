@@ -1,0 +1,44 @@
+[0.013s] Invoking command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20
+[0.164s] [35m[1mConsolidate compiler generated dependencies of target position_control[0m
+[0.165s] [ 50%] [32mBuilding CXX object CMakeFiles/position_control.dir/src/position_control.cpp.o[0m
+[1.463s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:8:45:[m[K [01;31m[Kerror: [m[K‘[01m[KInt8[m[K’ in namespace ‘[01m[Kstd_msgs::msg[m[K’ does not name a type
+[1.463s]     8 | void keyboard_callback(const std_msgs::msg::[01;31m[KInt8[m[K::SharedPtr msg)
+[1.463s]       |                                             [01;31m[K^~~~[m[K
+[1.463s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:8:61:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kmsg[m[K’
+[1.463s]     8 | yboard_callback(const std_msgs::msg::Int8::SharedPtr [01;31m[Kmsg[m[K)
+[1.463s]       |                                                      [01;31m[K^~~[m[K
+[1.463s] 
+[1.463s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:8:60:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kmsg[m[K’
+[1.464s]     8 | yboard_callback[34m[K([m[Kconst std_msgs::msg::Int8::SharedPtr[01;31m[K [m[K[32m[Kmsg[m[K)
+[1.464s]       |                [34m[K~[m[K                                    [01;31m[K^[m[K[32m[K~~~[m[K
+[1.464s]       |                                                     [32m[K)[m[K
+[1.464s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:8:61:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kmsg[m[K’
+[1.464s]     8 | yboard_callback(const std_msgs::msg::Int8::SharedPtr [01;31m[Kmsg[m[K)
+[1.464s]       |                                                      [01;31m[K^~~[m[K
+[1.464s] 
+[1.467s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid path()[m[K’:
+[1.467s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:58:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_index[m[K’ was not declared in this scope
+[1.467s]    58 |     if ([01;31m[Ktarget_index[m[K < points.size())
+[1.467s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[1.469s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:62:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_ee[m[K’ was not declared in this scope
+[1.469s]    62 |         distance = sqrt(pow(x_target - [01;31m[Kx_ee[m[K, 2) + pow(y_target - y_ee, 2));
+[1.469s]       |                                        [01;31m[K^~~~[m[K
+[1.470s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:62:66:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_ee[m[K’ was not declared in this scope
+[1.470s]    62 |  sqrt(pow(x_target - x_ee, 2) + pow(y_target - [01;31m[Ky_ee[m[K, 2));
+[1.470s]       |                                                [01;31m[K^~~~[m[K
+[1.470s] 
+[1.477s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.477s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:99:95:[m[K [01;31m[Kerror: [m[K‘[01m[Kkeyboard_callback[m[K’ was not declared in this scope
+[1.477s]    99 | td_msgs::msg::Int8MultiArray>("keyboard", 10, [01;31m[Kkeyboard_callback[m[K);
+[1.477s]       |                                               [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.477s] 
+[1.478s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:107:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_ee[m[K’ was not declared in this scope
+[1.478s]   107 |         IK_2dim([01;31m[Kx_ee[m[K, y_ee);
+[1.479s]       |                 [01;31m[K^~~~[m[K
+[1.480s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:107:23:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_ee[m[K’ was not declared in this scope
+[1.480s]   107 |         IK_2dim(x_ee, [01;31m[Ky_ee[m[K);
+[1.480s]       |                       [01;31m[K^~~~[m[K
+[1.970s] gmake[2]: *** [CMakeFiles/position_control.dir/build.make:76: CMakeFiles/position_control.dir/src/position_control.cpp.o] Error 1
+[1.970s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/position_control.dir/all] Error 2
+[1.970s] gmake: *** [Makefile:146: all] Error 2
+[1.973s] Invoked command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20

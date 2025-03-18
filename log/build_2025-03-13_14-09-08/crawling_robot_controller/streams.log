@@ -1,0 +1,20 @@
+[0.012s] Invoking command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20
+[0.167s] [ 50%] [32mBuilding CXX object CMakeFiles/position_control.dir/src/position_control.cpp.o[0m
+[1.460s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:9:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kbool move_forward[m[K’
+[1.460s]     9 | bool [01;31m[Kmove_forward[m[K = false;
+[1.460s]       |      [01;31m[K^~~~~~~~~~~~[m[K
+[1.460s] In file included from [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:1[m[K:
+[1.460s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/define.h:89:6:[m[K [01;36m[Knote: [m[K‘[01m[Kbool move_forward[m[K’ previously defined here
+[1.460s]    89 | bool [01;36m[Kmove_forward[m[K = true;
+[1.460s]       |      [01;36m[K^~~~~~~~~~~~[m[K
+[1.460s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:10:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kbool move_backward[m[K’
+[1.460s]    10 | bool [01;31m[Kmove_backward[m[K = false;
+[1.460s]       |      [01;31m[K^~~~~~~~~~~~~[m[K
+[1.460s] In file included from [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:1[m[K:
+[1.460s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/define.h:90:6:[m[K [01;36m[Knote: [m[K‘[01m[Kbool move_backward[m[K’ previously defined here
+[1.460s]    90 | bool [01;36m[Kmove_backward[m[K = false;
+[1.460s]       |      [01;36m[K^~~~~~~~~~~~~[m[K
+[3.049s] gmake[2]: *** [CMakeFiles/position_control.dir/build.make:76: CMakeFiles/position_control.dir/src/position_control.cpp.o] Error 1
+[3.050s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/position_control.dir/all] Error 2
+[3.050s] gmake: *** [Makefile:146: all] Error 2
+[3.052s] Invoked command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20
