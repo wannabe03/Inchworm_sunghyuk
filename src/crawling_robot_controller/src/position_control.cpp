@@ -7,32 +7,100 @@
 
 int g_keyboard_command =0;
 int target_index = 1;
-
+bool free_mode = false;
+double move_size = 0.000;
+double length_size = 0.000;
 rclcpp::Publisher<std_msgs::msg::Int8MultiArray>::SharedPtr gripper_state_pub;
+
+std::vector<std::pair<double, double>> getPoints(double move_size, double length_size) {
+    return {
+        {0.185 + move_size, 0.0},
+        {0.185 + move_size, 0.05 + length_size},
+        {0.22 + move_size, 0.12 + length_size},
+        {0.22 + move_size, 0.0},
+        {0.22 + move_size, -0.12 - length_size},
+        {0.185 + move_size, -0.05 - length_size},
+        {0.185, 0.0}
+    };
+}
+auto points = getPoints(move_size,length_size);
+double x_ee = points[0].first;
+double y_ee = points[0].second;
 
 void keyboard_callback(const std_msgs::msg::Int8::SharedPtr msg)
 {
-    if (msg->data == 0) {
-        move_forward = false;
-        move_backward = false;
-        // RCLCPP_INFO(rclcpp::get_logger("position_control"), "move_stop");
+    if (free_mode){
+        if (msg->data == 0) {
+            move_forward = false;
+            move_backward = false;
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_mode_stop");
+        } 
+        else if (msg->data == 3) {
+            move_forward = true;
+            move_backward = false;
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_move_forward");
+        }
+        else if (msg->data == 4) {
+            move_forward = false;
+            move_backward = true;
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_move_forward");
+        }
+        else if (msg->data == 7) {
+            move_forward = false;
+            move_backward = false;
+            free_mode = false;
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_move_out");
+        }
     }
-    else if (msg->data == 3) {
-        move_forward = true;
-        move_backward = false;
-        // RCLCPP_INFO(rclcpp::get_logger("position_control"), "move_forward");
+    else if (free_mode == false){
+        if (msg->data == 0) {
+            move_forward = false;
+            move_backward = false;
+            // RCLCPP_INFO(rclcpp::get_logger("position_control"), "move_stop");
+        } 
+        else if (msg->data == 3) {
+            move_forward = true;
+            move_backward = false;
+            // RCLCPP_INFO(rclcpp::get_logger("position_control"), "move_forward");
+        }
+        else if (msg->data == 4) {
+            move_forward = false;
+            move_backward = true;
+            // RCLCPP_INFO(rclcpp::get_logger("position_control"), "move_forward");
+        }
+        else if (msg->data == 5) {
+            move_size += 0.01;
+            length_size -= 0.03;
+            move_size = move_size > 0.03 ? 0.03 : move_size;
+            length_size = length_size < -0.06 ? -0.06 : length_size;
+
+            // if (move_size == 0.01) length_size -= 0.03;
+            // else if (move_size == 0.02) length_size -= 0.05;
+            // else if (move_size == 0.03) length_size -= 0.07;
+            
+            
+            points = getPoints(move_size, length_size);
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "move_size : %f", move_size);
+        }
+        else if (msg->data == 6) {
+            move_size -= 0.01;
+            length_size += 0.01;
+
+            // if (move_size == -0.01) length_size += 0.03;
+            // else if (move_size == -0.02) length_size += 0.04;
+            // else if (move_size == -0.03) length_size += 0.05;
+            move_size = move_size < -0.03 ? -0.03 : move_size;
+            length_size = length_size > 0.06 ? 0.06 : length_size;
+            
+            points = getPoints(move_size, length_size);
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "move_size : %f", move_size);
+        }
+        else if(msg->data == 7){
+            free_mode = true;
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_move_in");
+        }
     }
-    else if (msg->data == 4) {
-        move_forward = false;
-        move_backward = true;
-        // RCLCPP_INFO(rclcpp::get_logger("position_control"), "move_forward");
-    }
-    // else if (msg->data == 5) {
-    //     points.clear(); 
-    //     target_index = 0;
-    //     x_ee = 0;
-    //     y_ee = 0;
-    // }
+    //RCLCPP_INFO(rclcpp::get_logger("position_control"), "keyboard_callback : %d, move_size = %f", msg->data, move_size);
 }
 
 void IK_2dim(double x, double y)
@@ -56,7 +124,7 @@ void path()
 {
     static bool delay_active = true;
     static int delay_counter = 0;
-    const int delay_duration = 50;
+    const int delay_duration = 20;
     static int previous_index = -1;
 
     if (delay_active) 
@@ -74,6 +142,7 @@ void path()
 
     if (target_index < points.size()) 
     {
+        points = getPoints(move_size,length_size);
         x_target = points[target_index].first;
         y_target = points[target_index].second;
         distance = sqrt(pow(x_target - x_ee, 2) + pow(y_target - y_ee, 2));
@@ -108,7 +177,7 @@ void path()
         }
 
         else if(move_backward){
-        if ((previous_index == 5 && target_index == 4) || (previous_index == 1 && target_index == 0)) delay_active = true;
+        //if ((previous_index == 3 && target_index == 2) || (previous_index == 0 && target_index == 6)) delay_active = true;
         
         BASEisOpend = target_index <=  4;
         EEisOpend = target_index > 4;
@@ -118,7 +187,7 @@ void path()
         }
 
         gripper_state_pub->publish(gripper_state_msg);
-        RCLCPP_INFO(rclcpp::get_logger("position_control"), "target_index : %d", target_index);
+        RCLCPP_INFO(rclcpp::get_logger("position_control"), "x_target: %f, y_target: %f, move_size: %f, length_size: %f, target_index : %d", x_target, y_target, move_size, length_size,  target_index);
 
         previous_index = target_index;
         }

@@ -65,10 +65,7 @@ double ee_now_pos = 0;
 int BASEisOpend = 0;
 int EEisOpend = 1;
 
-std::vector<std::pair<double, double>> points = 
-    {
-        {0.185, 0.0}, {0.185, 0.1}, {0.22, 0.12}, {0.22, 0.0}, {0.22, -0.12}, {0.185, -0.1}, {0.185, 0.0}
-    };
+
 // std::vector<std::pair<double, double>> points2 = 
 //     {
 //         {0.22, 0.0}, {0.17, 0.10}, {0.15, 0.15}, {0.15, 0.17}, {0.15, 0.15}, {0.17, 0.10}, {0.22, 0.0}
@@ -76,9 +73,6 @@ std::vector<std::pair<double, double>> points =
     
 // 팔길이가 0.26m 이기에 x가 0.22m일때 y의 한계는 0.138m 
  
-
-double x_ee = points[0].first;
-double y_ee = points[0].second;
 double x_target = 0;
 double y_target = 0;
 double step_size = 0.005;

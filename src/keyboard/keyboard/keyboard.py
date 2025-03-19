@@ -19,6 +19,7 @@ class KeyboardTeleop(Node):
             key =sys.stdin.read(1)
             if key == '\x1b':
                 key +=sys.stdin.read(2)
+                
         termios.tcsetattr(sys.stdin,termios.TCSADRAIN,self.settings)
         return key
     
@@ -35,8 +36,12 @@ class KeyboardTeleop(Node):
                     command = 3
                 elif key == '\x1b[D':
                     command = 4
-                elif key == 'm':
+                elif key == '.':
                     command = 5
+                elif key == ',':
+                    command = 6 
+                elif key == 'f':
+                    command = 7 
                 elif key == '\x03':
                     rclpy.shutdown()
                     return

@@ -1,0 +1,30 @@
+In file included from [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:1[m[K:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/define.h:77:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kpoints[m[K’ was not declared in this scope; did you mean ‘[01m[Kprintf[m[K’?
+   77 | double x_ee = [01;31m[Kpoints[m[K[0].first;
+      |               [01;31m[K^~~~~~[m[K
+      |               [32m[Kprintf[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/define.h:78:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kpoints[m[K’ was not declared in this scope; did you mean ‘[01m[Kprintf[m[K’?
+   78 | double y_ee = [01;31m[Kpoints[m[K[0].second;
+      |               [01;31m[K^~~~~~[m[K
+      |               [32m[Kprintf[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:26:8:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kdouble x_ee[m[K’
+   26 | double [01;31m[Kx_ee[m[K = points[0].first;
+      |        [01;31m[K^~~~[m[K
+In file included from [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:1[m[K:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/define.h:77:8:[m[K [01;36m[Knote: [m[K‘[01m[Kdouble x_ee[m[K’ previously defined here
+   77 | double [01;36m[Kx_ee[m[K = points[0].first;
+      |        [01;36m[K^~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:27:8:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kdouble y_ee[m[K’
+   27 | double [01;31m[Ky_ee[m[K = points[0].second;
+      |        [01;31m[K^~~~[m[K
+In file included from [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:1[m[K:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/define.h:78:8:[m[K [01;36m[Knote: [m[K‘[01m[Kdouble y_ee[m[K’ previously defined here
+   78 | double [01;36m[Ky_ee[m[K = points[0].second;
+      |        [01;36m[K^~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid path()[m[K’:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:127:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<double, double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  127 |     if ([01;35m[Ktarget_index < points.size()[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/position_control.dir/build.make:76: CMakeFiles/position_control.dir/src/position_control.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/position_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

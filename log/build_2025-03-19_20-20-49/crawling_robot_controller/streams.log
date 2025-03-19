@@ -1,0 +1,88 @@
+[0.012s] Invoking command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20
+[0.176s] [ 50%] [32mBuilding CXX object CMakeFiles/position_control.dir/src/position_control.cpp.o[0m
+[1.566s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:10:8:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kdouble step_size[m[K’
+[1.566s]    10 | double [01;31m[Kstep_size[m[K = 0.000;
+[1.566s]       |        [01;31m[K^~~~~~~~~[m[K
+[1.567s] In file included from [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:1[m[K:
+[1.567s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/define.h:84:8:[m[K [01;36m[Knote: [m[K‘[01m[Kdouble step_size[m[K’ previously defined here
+[1.567s]    84 | double [01;36m[Kstep_size[m[K = 0.005;
+[1.567s]       |        [01;36m[K^~~~~~~~~[m[K
+[1.567s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:13:40:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kstd::vector<std::pair<double, double> > points[m[K’
+[1.567s]    13 | vector<std::pair<double, double>> [01;31m[Kpoints[m[K =
+[1.567s]       |                                   [01;31m[K^~~~~~[m[K
+[1.567s] 
+[1.567s] In file included from [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:1[m[K:
+[1.567s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/include/crawling_robot_controller/define.h:68:40:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector<std::pair<double, double> > points[m[K’ previously declared here
+[1.567s]    68 | vector<std::pair<double, double>> [01;36m[Kpoints[m[K =
+[1.567s]       |                                   [01;36m[K^~~~~~[m[K
+[1.567s] 
+[1.567s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:15:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kdouble[m[K’
+[1.567s]    15 |         {0.17+[01;31m[Kdouble[m[K, 0.0}, {0.17+double, 0.1}, {0.19+double, 0.12}, {0.19+double, 0.0}, {0.19+double, -0.12}, {0.17+double, -0.1}, {0.17+double, 0.0}
+[1.567s]       |               [01;31m[K^~~~~~[m[K
+[1.567s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:15:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[Kdouble[m[K’
+[1.567s]    15 |         [32m[K{[m[K0.17+[01;31m[Kdouble[m[K, 0.0}, {0.17+double, 0.1}, {0.19+double, 0.12}, {0.19+double, 0.0}, {0.19+double, -0.12}, {0.17+double, -0.1}, {0.17+double, 0.0}
+[1.567s]       |         [32m[K~[m[K     [01;31m[K^~~~~~[m[K
+[1.567s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:15:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[Kdouble[m[K’
+[1.567s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:14:5:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[1.567s]    14 |     [01;36m[K{[m[K
+[1.567s]       |     [01;36m[K^[m[K
+[1.567s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:26:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[1.567s]    15 |         {0.17+double, 0.0[01;31m[K}[m[K, {0.17+double, 0.1}, {0.19+double, 0.12}, {0.19+double, 0.0}, {0.19+double, -0.12}, {0.17+double, -0.1}, {0.17+double, 0.0}
+[1.567s]       |                          [01;31m[K^[m[K
+[1.567s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:27:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K,[m[K’ token
+[1.567s]    15 |         {0.17+double, 0.0}[01;31m[K,[m[K {0.17+double, 0.1}, {0.19+double, 0.12}, {0.19+double, 0.0}, {0.19+double, -0.12}, {0.17+double, -0.1}, {0.17+double, 0.0}
+[1.567s]       |                           [01;31m[K^[m[K
+[1.567s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:29:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K{[m[K’ token
+[1.567s]    15 |         {0.17+double, 0.0}, [01;31m[K{[m[K0.17+double, 0.1}, {0.19+double, 0.12}, {0.19+double, 0.0}, {0.19+double, -0.12}, {0.17+double, -0.1}, {0.17+double, 0.0}
+[1.567s]       |                             [01;31m[K^[m[K
+[1.567s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:47:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K,[m[K’ token
+[1.567s]    15 | ouble, 0.0}, {0.17+double, 0.1}[01;31m[K,[m[K {0.19+double, 0.12}, {0.19+double, 0.0}, {0.19+double, -0.12}, {0.17+double, -0.1}, {0.17+double, 0.0}
+[1.568s]       |                                [01;31m[K^[m[K
+[1.568s] 
+[1.568s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:49:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K{[m[K’ token
+[1.568s]    15 | ble, 0.0}, {0.17+double, 0.1}, [01;31m[K{[m[K0.19+double, 0.12}, {0.19+double, 0.0}, {0.19+double, -0.12}, {0.17+double, -0.1}, {0.17+double, 0.0}
+[1.568s]       |                                [01;31m[K^[m[K
+[1.568s] 
+[1.568s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:68:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K,[m[K’ token
+[1.568s]    15 | uble, 0.1}, {0.19+double, 0.12}[01;31m[K,[m[K {0.19+double, 0.0}, {0.19+double, -0.12}, {0.17+double, -0.1}, {0.17+double, 0.0}
+[1.568s]       |                                [01;31m[K^[m[K
+[1.568s] 
+[1.568s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:70:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K{[m[K’ token
+[1.568s]    15 | le, 0.1}, {0.19+double, 0.12}, [01;31m[K{[m[K0.19+double, 0.0}, {0.19+double, -0.12}, {0.17+double, -0.1}, {0.17+double, 0.0}
+[1.568s]       |                                [01;31m[K^[m[K
+[1.568s] 
+[1.568s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:88:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K,[m[K’ token
+[1.568s]    15 | uble, 0.12}, {0.19+double, 0.0}[01;31m[K,[m[K {0.19+double, -0.12}, {0.17+double, -0.1}, {0.17+double, 0.0}
+[1.568s]       |                                [01;31m[K^[m[K
+[1.568s] 
+[1.568s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:90:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K{[m[K’ token
+[1.568s]    15 | le, 0.12}, {0.19+double, 0.0}, [01;31m[K{[m[K0.19+double, -0.12}, {0.17+double, -0.1}, {0.17+double, 0.0}
+[1.568s]       |                                [01;31m[K^[m[K
+[1.568s] 
+[1.568s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:110:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K,[m[K’ token
+[1.568s]    15 | ble, 0.0}, {0.19+double, -0.12}[01;31m[K,[m[K {0.17+double, -0.1}, {0.17+double, 0.0}
+[1.568s]       |                                [01;31m[K^[m[K
+[1.568s] 
+[1.568s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:112:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K{[m[K’ token
+[1.568s]    15 | e, 0.0}, {0.19+double, -0.12}, [01;31m[K{[m[K0.17+double, -0.1}, {0.17+double, 0.0}
+[1.568s]       |                                [01;31m[K^[m[K
+[1.568s] 
+[1.568s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:131:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K,[m[K’ token
+[1.568s]    15 | le, -0.12}, {0.17+double, -0.1}[01;31m[K,[m[K {0.17+double, 0.0}
+[1.568s]       |                                [01;31m[K^[m[K
+[1.568s] 
+[1.568s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:15:133:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K{[m[K’ token
+[1.568s]    15 | , -0.12}, {0.17+double, -0.1}, [01;31m[K{[m[K0.17+double, 0.0}
+[1.568s]       |                                [01;31m[K^[m[K
+[1.569s] 
+[1.569s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:16:5:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[1.569s]    16 |     [01;31m[K}[m[K;
+[1.569s]       |     [01;31m[K^[m[K
+[1.574s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid path()[m[K’:
+[1.574s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:116:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<double, double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[1.574s]   116 |     if ([01;35m[Ktarget_index < points.size()[m[K)
+[1.574s]       |         [01;35m[K~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+[3.174s] gmake[2]: *** [CMakeFiles/position_control.dir/build.make:76: CMakeFiles/position_control.dir/src/position_control.cpp.o] Error 1
+[3.175s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/position_control.dir/all] Error 2
+[3.175s] gmake: *** [Makefile:146: all] Error 2
+[3.177s] Invoked command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20
