@@ -1,2 +1,1 @@
-source;share/crawling_robot_controller/environment/ament_prefix_path.sh
-source;share/crawling_robot_controller/environment/path.sh
+/home/sshyuk/ros2_ws/build/crawling_robot_controller/ament_cmake_environment_hooks/local_setup.dsv

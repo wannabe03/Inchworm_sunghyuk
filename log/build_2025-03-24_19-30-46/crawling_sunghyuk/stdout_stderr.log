@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing crawling_sunghyuk.egg-info/PKG-INFO
+writing dependency_links to crawling_sunghyuk.egg-info/dependency_links.txt
+writing entry points to crawling_sunghyuk.egg-info/entry_points.txt
+writing requirements to crawling_sunghyuk.egg-info/requires.txt
+writing top-level names to crawling_sunghyuk.egg-info/top_level.txt
+reading manifest file 'crawling_sunghyuk.egg-info/SOURCES.txt'
+writing manifest file 'crawling_sunghyuk.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/crawling-sunghyuk.egg-link (link to .)
+Installing gripper_control script to /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/crawling_sunghyuk
+
+Installed /home/sshyuk/ros2_ws/build/crawling_sunghyuk
+running symlink_data
+symbolically linking /home/sshyuk/ros2_ws/build/crawling_sunghyuk/resource/crawling_sunghyuk -> /home/sshyuk/ros2_ws/install/crawling_sunghyuk/share/ament_index/resource_index/packages
+symbolically linking /home/sshyuk/ros2_ws/build/crawling_sunghyuk/package.xml -> /home/sshyuk/ros2_ws/install/crawling_sunghyuk/share/crawling_sunghyuk

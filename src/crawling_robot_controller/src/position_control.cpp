@@ -6,21 +6,28 @@
 #include <cmath>
 
 int g_keyboard_command =0;
-int target_index = 1;
+int target_index = 0;
+
 bool free_mode = false;
+bool free_move_x = false;
+bool free_move_y = false;
+bool free_move_x_back = false;
+bool free_move_y_back = false;
+double free_step = 0.001;
+double theta3_offset = M_PI/180;
 double move_size = 0.000;
 double length_size = 0.000;
 rclcpp::Publisher<std_msgs::msg::Int8MultiArray>::SharedPtr gripper_state_pub;
 
 std::vector<std::pair<double, double>> getPoints(double move_size, double length_size) {
     return {
-        {0.185 + move_size, 0.0},
-        {0.185 + move_size, 0.05 + length_size},
-        {0.22 + move_size, 0.12 + length_size},
-        {0.22 + move_size, 0.0},
-        {0.22 + move_size, -0.12 - length_size},
-        {0.185 + move_size, -0.05 - length_size},
-        {0.185, 0.0}
+        {0.17, 0.0},
+        {0.19 + move_size/2, 0.05 + length_size},
+        {0.21 + move_size, 0.10 + length_size},
+        {0.21 + move_size, 0.0},
+        {0.21 + move_size, -0.10 - length_size},
+        {0.19 + move_size/2, -0.05 - length_size},
+        {0.17, 0.0}
     };
 }
 auto points = getPoints(move_size,length_size);
@@ -31,24 +38,52 @@ void keyboard_callback(const std_msgs::msg::Int8::SharedPtr msg)
 {
     if (free_mode){
         if (msg->data == 0) {
-            move_forward = false;
-            move_backward = false;
+            free_move_x = false;
+            free_move_y = false;
+            free_move_x_back = false;
+            free_move_y_back = false;
             RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_mode_stop");
         } 
-        else if (msg->data == 3) {
-            move_forward = true;
-            move_backward = false;
-            RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_move_forward");
+        else if (msg->data == 1) {  // 키보드 위의 버튼: y축 이동 (예: 위로)
+            free_move_y = true;
+            free_move_x = false;
+            free_move_x_back = false;
+            free_move_y_back = false;
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_move_y");
         }
-        else if (msg->data == 4) {
-            move_forward = false;
-            move_backward = true;
-            RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_move_forward");
+        else if (msg->data == 3) {  // 키보드 앞으로 버튼: x축 이동
+            free_move_x = true;
+            free_move_y = false;
+            free_move_x_back = false;
+            free_move_y_back = false;
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_move_x");
         }
-        else if (msg->data == 7) {
-            move_forward = false;
-            move_backward = false;
+        else if (msg->data == 2) {  // 키보드 아래의 버튼: y축 이동 (예: 위로)
+            free_move_y = false;
+            free_move_x = false;
+            free_move_x_back = false;
+            free_move_y_back = true;
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_move_y");
+        }
+        else if (msg->data == 4) {  // 키보드 뒤으로 버튼: x축 이동
+            free_move_x = false;
+            free_move_y = false;
+            free_move_x_back = true;
+            free_move_y_back = false;
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_move_x");
+        }
+        else if (msg->data == 5) {
+            theta3_offset -= 0.05;
+        }
+        else if (msg->data == 6) {
+            theta3_offset += 0.05;
+        }
+        else if (msg->data == 7) {  // free_mode 종료
             free_mode = false;
+            free_move_x = false;
+            free_move_y = false;
+            free_move_x_back = false;
+            free_move_y_back = false;
             RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_move_out");
         }
     }
@@ -70,9 +105,9 @@ void keyboard_callback(const std_msgs::msg::Int8::SharedPtr msg)
         }
         else if (msg->data == 5) {
             move_size += 0.01;
-            length_size -= 0.03;
-            move_size = move_size > 0.03 ? 0.03 : move_size;
-            length_size = length_size < -0.06 ? -0.06 : length_size;
+            //length_size -= 0.03;
+            move_size = move_size > 0.02 ? 0.02 : move_size;
+            //length_size = length_size < -0.06 ? -0.06 : length_size;
 
             // if (move_size == 0.01) length_size -= 0.03;
             // else if (move_size == 0.02) length_size -= 0.05;
@@ -84,13 +119,13 @@ void keyboard_callback(const std_msgs::msg::Int8::SharedPtr msg)
         }
         else if (msg->data == 6) {
             move_size -= 0.01;
-            length_size += 0.01;
+            //length_size += 0.01;
 
             // if (move_size == -0.01) length_size += 0.03;
             // else if (move_size == -0.02) length_size += 0.04;
             // else if (move_size == -0.03) length_size += 0.05;
-            move_size = move_size < -0.03 ? -0.03 : move_size;
-            length_size = length_size > 0.06 ? 0.06 : length_size;
+            move_size = move_size < -0.02 ? -0.02 : move_size;
+            //length_size = length_size > 0.06 ? 0.06 : length_size;
             
             points = getPoints(move_size, length_size);
             RCLCPP_INFO(rclcpp::get_logger("position_control"), "move_size : %f", move_size);
@@ -168,12 +203,14 @@ void path()
 
         if(move_forward){
         if ((previous_index == 3 && target_index == 4) || (previous_index == 6 && target_index == 0)) delay_active = true;
-
+ 
         BASEisOpend = target_index >= 4;
         EEisOpend = target_index < 4;
+
         gripper_state_msg.data.resize(2);
-        gripper_state_msg.data[0] = BASEisOpend ? 1 : 0;
-        gripper_state_msg.data[1] = EEisOpend ? 1 : 0;
+        gripper_state_msg.data[0] = BASEisOpend ? 1: 0;
+        gripper_state_msg.data[1] = EEisOpend ? 1: 0;
+        
         }
 
         else if(move_backward){
@@ -182,8 +219,8 @@ void path()
         BASEisOpend = target_index <=  4;
         EEisOpend = target_index > 4;
         gripper_state_msg.data.resize(2);
-        gripper_state_msg.data[0] = BASEisOpend ? 1 : 0;
-        gripper_state_msg.data[1] = EEisOpend ? 1 : 0;
+        gripper_state_msg.data[0] = BASEisOpend ? 0 : 1;
+        gripper_state_msg.data[1] = EEisOpend ? 0 : 1;
         }
 
         gripper_state_pub->publish(gripper_state_msg);
@@ -211,6 +248,31 @@ int main(int argc, char **argv)
 
     while (rclcpp::ok()) 
     {
+        if (free_mode) {
+            // free_mode 상태에서는 기존 path() 호출 없이 현재 좌표에서 직접 업데이트
+            if (free_move_x) {
+                x_ee += free_step;  // x축으로 증가 (전진)
+            }
+            if (free_move_y) {
+                y_ee += free_step;  // y축으로 증가 (위로)
+            }
+            if (free_move_x_back) {
+                x_ee -= free_step;  // x축으로 감소 (후진)
+            }
+            if (free_move_y_back) {
+                y_ee -= free_step;  // y축으로 감소 (아래로)
+            }
+            IK_2dim(x_ee, y_ee);
+            BASE_position_control(base_ref_pos);
+            ELBOW_position_control(elbow_ref_pos);
+            
+            ee_ref_pos += theta3_offset;
+            ee_ref_pos = ee_ref_pos > 1.58 * M_PI ? 1.58 * M_PI: ee_ref_pos;
+            ee_ref_pos = ee_ref_pos < 0.42 * M_PI ? 0.42 * M_PI: ee_ref_pos;
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "theta3_offset : %f | ee_ref_pos : %f", theta3_offset, ee_ref_pos * 180 / M_PI);
+            EE_position_control(ee_ref_pos);
+        }
+    
         // RCLCPP_INFO(rclcpp::get_logger("position_control"), "You can do it! ");
         if(move_forward||move_backward)
         {

@@ -1,0 +1,61 @@
+[0.000000] (-) TimerEvent: {}
+[0.000162] (crawling_robot_controller) JobQueued: {'identifier': 'crawling_robot_controller', 'dependencies': OrderedDict()}
+[0.000185] (crawling_sunghyuk) JobQueued: {'identifier': 'crawling_sunghyuk', 'dependencies': OrderedDict()}
+[0.000198] (keyboard) JobQueued: {'identifier': 'keyboard', 'dependencies': OrderedDict()}
+[0.000208] (crawling_robot_controller) JobStarted: {'identifier': 'crawling_robot_controller'}
+[0.003743] (crawling_sunghyuk) JobStarted: {'identifier': 'crawling_sunghyuk'}
+[0.006733] (keyboard) JobStarted: {'identifier': 'keyboard'}
+[0.010076] (crawling_robot_controller) JobProgress: {'identifier': 'crawling_robot_controller', 'progress': 'cmake'}
+[0.010366] (crawling_robot_controller) JobProgress: {'identifier': 'crawling_robot_controller', 'progress': 'build'}
+[0.010961] (crawling_robot_controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sshyuk/ros2_ws/build/crawling_robot_controller', '--', '-j20', '-l20'], 'cwd': '/home/sshyuk/ros2_ws/build/crawling_robot_controller', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'sshyuk'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/sshyuk'), ('OLDPWD', '/home/sshyuk/ros2_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1807'), ('SYSTEMD_EXEC_PID', '1981'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '17150'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/sshyuk/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'sshyuk'), ('JOURNAL_STREAM', '8:13596'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sshyuk'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/sshyuk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/sshyuk:@/tmp/.ICE-unix/1945,unix/sshyuk:/tmp/.ICE-unix/1945'), ('INVOCATION_ID', '56d01d42535f40e79036d2766f803317'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.BNC332'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/home/sshyuk/ros2_ws/install/crawling_robot_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:1b197579-8b59-4001-a29b-28162cfa5ac3'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sshyuk/ros2_ws/build/crawling_robot_controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sshyuk/ros2_ws/install/keyboard/lib/python3.10/site-packages:/home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/sshyuk/ros2_ws/install/crawling_robot_controller')]), 'shell': False}
+[0.099554] (-) TimerEvent: {}
+[0.167991] (crawling_robot_controller) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.168432] (crawling_robot_controller) StdoutLine: {'line': b'-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.168473] (crawling_robot_controller) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.168505] (crawling_robot_controller) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.168533] (crawling_robot_controller) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.168562] (crawling_robot_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.178180] (crawling_robot_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.199661] (-) TimerEvent: {}
+[0.208843] (crawling_robot_controller) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.210245] (crawling_robot_controller) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.289500] (crawling_robot_controller) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.299757] (-) TimerEvent: {}
+[0.328087] (crawling_robot_controller) StdoutLine: {'line': b'-- Found dynamixel_sdk: 3.7.60 (/opt/ros/humble/share/dynamixel_sdk/cmake)\n'}
+[0.329229] (crawling_robot_controller) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.338645] (crawling_robot_controller) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.377353] (crawling_robot_controller) StderrLine: {'line': b"Error parsing '/home/sshyuk/ros2_ws/src/crawling_robot_controller/package.xml':\n"}
+[0.399963] (-) TimerEvent: {}
+[0.408142] (crawling_robot_controller) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[0.408268] (crawling_robot_controller) StderrLine: {'line': b'  File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>\n'}
+[0.408310] (crawling_robot_controller) StderrLine: {'line': b'    main()\n'}
+[0.408344] (crawling_robot_controller) StderrLine: {'line': b'  File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main\n'}
+[0.408377] (crawling_robot_controller) StderrLine: {'line': b'    raise e\n'}
+[0.408409] (crawling_robot_controller) StderrLine: {'line': b'  File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main\n'}
+[0.408438] (crawling_robot_controller) StderrLine: {'line': b'    package = parse_package_string(\n'}
+[0.408467] (crawling_robot_controller) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 786, in parse_package_string\n'}
+[0.409329] (crawling_robot_controller) StderrLine: {'line': b"    raise InvalidPackage('Error(s):%s' % (''.join(['\\n- %s' % e for e in errors])), filename)\n"}
+[0.409411] (crawling_robot_controller) StderrLine: {'line': b"catkin_pkg.package.InvalidPackage: Error(s) in package '/home/sshyuk/ros2_ws/src/crawling_robot_controller/package.xml':\n"}
+[0.409449] (crawling_robot_controller) StderrLine: {'line': b'Error(s):\n'}
+[0.409481] (crawling_robot_controller) StderrLine: {'line': b'- The manifest of package "crawling_robot_controller" (with format version 3) must not contain the following tags: install\n'}
+[0.419185] (crawling_robot_controller) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):\n'}
+[0.419411] (crawling_robot_controller) StderrLine: {'line': b'  execute_process(/usr/bin/python3\n'}
+[0.419453] (crawling_robot_controller) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py\n'}
+[0.419486] (crawling_robot_controller) StderrLine: {'line': b'  /home/sshyuk/ros2_ws/src/crawling_robot_controller/package.xml\n'}
+[0.419519] (crawling_robot_controller) StderrLine: {'line': b'  /home/sshyuk/ros2_ws/build/crawling_robot_controller/ament_cmake_core/package.cmake)\n'}
+[0.419551] (crawling_robot_controller) StderrLine: {'line': b'  returned error code 1\n'}
+[0.419579] (crawling_robot_controller) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.419608] (crawling_robot_controller) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[0.419637] (crawling_robot_controller) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)\n'}
+[0.419666] (crawling_robot_controller) StderrLine: {'line': b'  CMakeLists.txt:19 (ament_lint_auto_find_test_dependencies)\n'}
+[0.419694] (crawling_robot_controller) StderrLine: {'line': b'\n'}
+[0.419723] (crawling_robot_controller) StderrLine: {'line': b'\x1b[0m\n'}
+[0.419752] (crawling_robot_controller) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.419788] (crawling_robot_controller) StdoutLine: {'line': b'See also "/home/sshyuk/ros2_ws/build/crawling_robot_controller/CMakeFiles/CMakeOutput.log".\n'}
+[0.424578] (crawling_robot_controller) StderrLine: {'line': b'gmake: *** [Makefile:267: cmake_check_build_system] Error 1\n'}
+[0.426205] (crawling_robot_controller) CommandEnded: {'returncode': 2}
+[0.426627] (crawling_robot_controller) JobEnded: {'identifier': 'crawling_robot_controller', 'rc': 2}
+[0.500127] (-) TimerEvent: {}
+[0.525260] (keyboard) JobEnded: {'identifier': 'keyboard', 'rc': 'SIGINT'}
+[0.527719] (crawling_sunghyuk) JobEnded: {'identifier': 'crawling_sunghyuk', 'rc': 'SIGINT'}
+[0.538368] (-) EventReactorShutdown: {}

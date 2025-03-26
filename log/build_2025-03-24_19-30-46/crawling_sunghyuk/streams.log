@@ -1,0 +1,19 @@
+[0.528s] Invoking command in '/home/sshyuk/ros2_ws/build/crawling_sunghyuk': PYTHONPATH=/home/sshyuk/ros2_ws/build/crawling_sunghyuk/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build --no-deps symlink_data --force
+[0.684s] running develop
+[0.769s] running egg_info
+[0.770s] writing crawling_sunghyuk.egg-info/PKG-INFO
+[0.770s] writing dependency_links to crawling_sunghyuk.egg-info/dependency_links.txt
+[0.770s] writing entry points to crawling_sunghyuk.egg-info/entry_points.txt
+[0.770s] writing requirements to crawling_sunghyuk.egg-info/requires.txt
+[0.770s] writing top-level names to crawling_sunghyuk.egg-info/top_level.txt
+[0.771s] reading manifest file 'crawling_sunghyuk.egg-info/SOURCES.txt'
+[0.771s] writing manifest file 'crawling_sunghyuk.egg-info/SOURCES.txt'
+[0.772s] running build_ext
+[0.772s] Creating /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/crawling-sunghyuk.egg-link (link to .)
+[0.773s] Installing gripper_control script to /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/crawling_sunghyuk
+[0.773s] 
+[0.773s] Installed /home/sshyuk/ros2_ws/build/crawling_sunghyuk
+[0.773s] running symlink_data
+[0.773s] symbolically linking /home/sshyuk/ros2_ws/build/crawling_sunghyuk/resource/crawling_sunghyuk -> /home/sshyuk/ros2_ws/install/crawling_sunghyuk/share/ament_index/resource_index/packages
+[0.773s] symbolically linking /home/sshyuk/ros2_ws/build/crawling_sunghyuk/package.xml -> /home/sshyuk/ros2_ws/install/crawling_sunghyuk/share/crawling_sunghyuk
+[0.792s] Invoked command in '/home/sshyuk/ros2_ws/build/crawling_sunghyuk' returned '0': PYTHONPATH=/home/sshyuk/ros2_ws/build/crawling_sunghyuk/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build --no-deps symlink_data --force

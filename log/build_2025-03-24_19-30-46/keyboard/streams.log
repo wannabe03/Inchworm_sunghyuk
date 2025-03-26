@@ -1,0 +1,19 @@
+[0.528s] Invoking command in '/home/sshyuk/ros2_ws/build/keyboard': PYTHONPATH=/home/sshyuk/ros2_ws/build/keyboard/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sshyuk/ros2_ws/install/keyboard/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sshyuk/ros2_ws/build/keyboard/build --no-deps symlink_data --force
+[0.695s] running develop
+[0.782s] running egg_info
+[0.782s] writing keyboard.egg-info/PKG-INFO
+[0.782s] writing dependency_links to keyboard.egg-info/dependency_links.txt
+[0.782s] writing entry points to keyboard.egg-info/entry_points.txt
+[0.782s] writing requirements to keyboard.egg-info/requires.txt
+[0.782s] writing top-level names to keyboard.egg-info/top_level.txt
+[0.783s] reading manifest file 'keyboard.egg-info/SOURCES.txt'
+[0.784s] writing manifest file 'keyboard.egg-info/SOURCES.txt'
+[0.785s] running build_ext
+[0.785s] Creating /home/sshyuk/ros2_ws/install/keyboard/lib/python3.10/site-packages/keyboard.egg-link (link to .)
+[0.785s] Installing keyboard_teleop script to /home/sshyuk/ros2_ws/install/keyboard/lib/keyboard
+[0.785s] 
+[0.785s] Installed /home/sshyuk/ros2_ws/build/keyboard
+[0.785s] running symlink_data
+[0.785s] symbolically linking /home/sshyuk/ros2_ws/build/keyboard/resource/keyboard -> /home/sshyuk/ros2_ws/install/keyboard/share/ament_index/resource_index/packages
+[0.785s] symbolically linking /home/sshyuk/ros2_ws/build/keyboard/package.xml -> /home/sshyuk/ros2_ws/install/keyboard/share/keyboard
+[0.803s] Invoked command in '/home/sshyuk/ros2_ws/build/keyboard' returned '0': PYTHONPATH=/home/sshyuk/ros2_ws/build/keyboard/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sshyuk/ros2_ws/install/keyboard/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sshyuk/ros2_ws/build/keyboard/build --no-deps symlink_data --force
