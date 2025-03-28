@@ -159,7 +159,7 @@ void path()
 {
     static bool delay_active = true;
     static int delay_counter = 0;
-    const int delay_duration = 20;
+    const int delay_duration = 30;
     static int previous_index = -1;
 
     if (delay_active) 
@@ -204,8 +204,8 @@ void path()
         if(move_forward){
         if ((previous_index == 3 && target_index == 4) || (previous_index == 6 && target_index == 0)) delay_active = true;
  
-        BASEisOpend = target_index >= 4;
-        EEisOpend = target_index < 4;
+        BASEisOpend = (target_index > 3);
+        EEisOpend = (target_index <= 3);
 
         gripper_state_msg.data.resize(2);
         gripper_state_msg.data[0] = BASEisOpend ? 1: 0;
@@ -214,13 +214,13 @@ void path()
         }
 
         else if(move_backward){
-        //if ((previous_index == 3 && target_index == 2) || (previous_index == 0 && target_index == 6)) delay_active = true;
+        if ((previous_index == 3 && target_index == 2) || (previous_index == 0 && target_index == 6)) delay_active = true;
         
-        BASEisOpend = target_index <=  4;
-        EEisOpend = target_index > 4;
+        BASEisOpend = target_index >= 3;
+        EEisOpend = target_index < 3;
         gripper_state_msg.data.resize(2);
-        gripper_state_msg.data[0] = BASEisOpend ? 0 : 1;
-        gripper_state_msg.data[1] = EEisOpend ? 0 : 1;
+        gripper_state_msg.data[0] = BASEisOpend ? 1 : 0;
+        gripper_state_msg.data[1] = EEisOpend ? 1 : 0;
         }
 
         gripper_state_pub->publish(gripper_state_msg);

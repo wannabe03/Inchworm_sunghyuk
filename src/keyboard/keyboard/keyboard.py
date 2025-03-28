@@ -39,9 +39,15 @@ class KeyboardTeleop(Node):
                 elif key == '.':
                     command = 5
                 elif key == ',':
-                    command = 6 
+                    command = 6
                 elif key == 'f':
-                    command = 7 
+                    command = 7
+                elif key == 'i':
+                    command = 8
+                elif key == 'o':
+                    command = 9
+                elif key == 'p':
+                    command = 10
                 elif key == '\x03':
                     rclpy.shutdown()
                     return
