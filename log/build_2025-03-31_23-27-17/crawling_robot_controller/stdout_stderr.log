@@ -1,0 +1,41 @@
+[35m[1mConsolidate compiler generated dependencies of target position_control[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/position_control.dir/src/position_control.cpp.o[0m
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid path()[m[K’:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:196:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<double, double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  196 |     if ([01;35m[Ktarget_index < points.size()[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:295:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K([m[K’ before ‘[01m[Kgrip_mode[m[K’
+  295 |             if [01;31m[Kg[m[K[32m[Krip_mode[m[K{
+      |                [01;31m[K^[m[K[32m[K~~~~~~~~[m[K
+      |                [32m[K([m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:298:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[Kelse[m[K’
+  298 |             [01;31m[Kelse[m[K if grip_mode_back{
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:269:24:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+  269 |         if (free_mode) [01;36m[K{[m[K
+      |                        [01;36m[K^[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:298:21:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K([m[K’ before ‘[01m[Kgrip_mode_back[m[K’
+  298 |             else if [01;31m[Kg[m[K[32m[Krip_mode_back[m[K{
+      |                     [01;31m[K^[m[K[32m[K~~~~~~~~~~~~~[m[K
+      |                     [32m[K([m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:301:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kelse[m[K’ without a previous ‘[01m[Kif[m[K’
+  301 |             [01;31m[Kelse[m[K {
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:304:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_state_msg[m[K’ was not declared in this scope; did you mean ‘[01m[Kgripper_state_pub[m[K’?
+  304 |             [01;31m[Kgripper_state_msg[m[K.data[0] = grip_command;
+      |             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |             [32m[Kgripper_state_pub[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K At global scope:
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:330:21:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion before ‘[01m[K;[m[K’ token
+  330 |     KILL_dynamixel()[01;31m[K;[m[K
+      |                     [01;31m[K^[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:331:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kreturn[m[K’
+  331 |     [01;31m[Kreturn[m[K 0;
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:332:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  332 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/position_control.dir/build.make:76: CMakeFiles/position_control.dir/src/position_control.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/position_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

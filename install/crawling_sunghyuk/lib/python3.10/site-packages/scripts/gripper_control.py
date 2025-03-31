@@ -1,4 +1,4 @@
-import rclpy
+import rclpy 
 from rclpy.node import Node
 from std_msgs.msg import Int8MultiArray
 import serial
@@ -21,12 +21,15 @@ class GripperControl(Node):
         self.subscription  # prevent unused variable warning
 
     def gripper_callback(self, msg):
-        if len(msg.data) < 2:
+        if len(msg.data) < 1:
             return
-        
-        base_state = msg.data[0]
-        ee_state = msg.data[1]
-        command = f"{base_state},{ee_state}\n"
+        elif len(msg.data) == 1:
+            base_state = msg.data[0]
+            command = f"{base_state}\n"
+        else:
+            base_state = msg.data[0]
+            ee_state = msg.data[1]
+            command = f"{base_state},{ee_state}\n"
 
         self.arduino_serial.write(command.encode())  # 시리얼 포트로 데이터 전송
         self.get_logger().info(f"Sent to Arduino: {command}")

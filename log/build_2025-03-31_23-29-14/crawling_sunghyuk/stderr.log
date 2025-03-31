@@ -1,0 +1,10 @@
+  File "/home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/scripts/gripper_control.py", line 1
+    import rclpy   /    / /////////////////////////////// //////////////////////////////////////////////
+                   ^
+SyntaxError: invalid syntax
+
+  File "/home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/crawling_sunghyuk/gripper_control.py", line 1
+    import rclpy ////////////////////////////////////////////////////////////////////////////////////
+                 ^^
+SyntaxError: invalid syntax
+

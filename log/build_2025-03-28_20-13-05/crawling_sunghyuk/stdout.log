@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/PKG-INFO
+writing dependency_links to ../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/dependency_links.txt
+writing entry points to ../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/entry_points.txt
+writing requirements to ../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/requires.txt
+writing top-level names to ../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/top_level.txt
+reading manifest file '../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/SOURCES.txt'
+writing manifest file '../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info/SOURCES.txt'
+running build
+running build_py
+copying crawling_sunghyuk/gripper_control.py -> /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build/lib/crawling_sunghyuk
+running install
+running install_lib
+copying /home/sshyuk/ros2_ws/build/crawling_sunghyuk/build/lib/crawling_sunghyuk/gripper_control.py -> /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/crawling_sunghyuk
+byte-compiling /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/crawling_sunghyuk/gripper_control.py to gripper_control.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/crawling_sunghyuk-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/crawling_sunghyuk/crawling_sunghyuk.egg-info to /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/python3.10/site-packages/crawling_sunghyuk-0.0.0-py3.10.egg-info
+running install_scripts
+Installing gripper_control script to /home/sshyuk/ros2_ws/install/crawling_sunghyuk/lib/crawling_sunghyuk
+writing list of installed files to '/home/sshyuk/ros2_ws/build/crawling_sunghyuk/install.log'

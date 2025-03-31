@@ -7,12 +7,16 @@
 
 int g_keyboard_command =0;
 int target_index = 0;
+int grip_command = 0;
 
 bool free_mode = false;
 bool free_move_x = false;
 bool free_move_y = false;
 bool free_move_x_back = false;
 bool free_move_y_back = false;
+bool grip_mode = false;
+bool grip_mode_back = false;
+
 double free_step = 0.001;
 double theta3_offset = M_PI/180;
 double move_size = 0.000;
@@ -42,6 +46,8 @@ void keyboard_callback(const std_msgs::msg::Int8::SharedPtr msg)
             free_move_y = false;
             free_move_x_back = false;
             free_move_y_back = false;
+            grip_mode = false;
+            grip_mode_back = false;
             RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_mode_stop");
         } 
         else if (msg->data == 1) {  // 키보드 위의 버튼: y축 이동 (예: 위로)
@@ -86,6 +92,18 @@ void keyboard_callback(const std_msgs::msg::Int8::SharedPtr msg)
             free_move_y_back = false;
             RCLCPP_INFO(rclcpp::get_logger("position_control"), "free_move_out");
         }
+        else if(msg->data == 8){
+            grip_mode = true;
+            grip_mode_back = false;
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "grip it!");
+        }
+
+        else if(msg->data == 9){
+            grip_mode = false;
+            grip_mode_back = true;
+            RCLCPP_INFO(rclcpp::get_logger("position_control"), "release it!");
+        }
+
     }
     else if (free_mode == false){
         if (msg->data == 0) {
@@ -224,7 +242,7 @@ void path()
         }
 
         gripper_state_pub->publish(gripper_state_msg);
-        RCLCPP_INFO(rclcpp::get_logger("position_control"), "x_target: %f, y_target: %f, move_size: %f, length_size: %f, target_index : %d", x_target, y_target, move_size, length_size,  target_index);
+        //RCLCPP_INFO(rclcpp::get_logger("position_control"), "x_target: %f, y_target: %f, move_size: %f, length_size: %f, target_index : %d", x_target, y_target, move_size, length_size,  target_index);
 
         previous_index = target_index;
         }
@@ -269,13 +287,28 @@ int main(int argc, char **argv)
             ee_ref_pos += theta3_offset;
             ee_ref_pos = ee_ref_pos > 1.58 * M_PI ? 1.58 * M_PI: ee_ref_pos;
             ee_ref_pos = ee_ref_pos < 0.42 * M_PI ? 0.42 * M_PI: ee_ref_pos;
-            RCLCPP_INFO(rclcpp::get_logger("position_control"), "theta3_offset : %f | ee_ref_pos : %f", theta3_offset, ee_ref_pos * 180 / M_PI);
+            //RCLCPP_INFO(rclcpp::get_logger("position_control"), "theta3_offset : %f | ee_ref_pos : %f", theta3_offset, ee_ref_pos * 180 / M_PI);
             EE_position_control(ee_ref_pos);
+
+            std_msgs::msg::Int8MultiArray gripper_state_msg;
+            gripper_state_msg.data.resize(1);
+
+            if (grip_mode){
+                grip_command = 3;
+            }
+            else if (grip_mode_back){
+                grip_command = 4;
+            }
+            else {
+                grip_command = 0;
+            }
+            gripper_state_msg.data[0] = grip_command;
+            gripper_state_pub->publish(gripper_state_msg);
+            RCLCPP_INFO(rclcpp::get_logger("position_control"),"Grip_command : %d", grip_command);
         }
-    
-        // RCLCPP_INFO(rclcpp::get_logger("position_control"), "You can do it! ");
-        if(move_forward||move_backward)
-        {
+        
+        if(move_forward||move_backward) {
+        
         // RCLCPP_INFO(rclcpp::get_logger("position_control"), "OH yeah! ");
         path();
         IK_2dim(x_ee, y_ee);

@@ -14,6 +14,8 @@ int prev_ee_command = -1;
 // 서보의 현재 위치 (초기값: 35도)
 int base_pos = 35;
 int ee_pos = 35;
+int single_movement = 35;
+
 
 // 서보 모터를 부드럽게 이동시키는 함수
 void moveServoSmoothly(Servo &servo, int &current_pos, int target_pos) {
@@ -45,6 +47,23 @@ void loop() {
     if (commaIndex > 0) {
       base_command = input.substring(0, commaIndex).toInt();
       ee_command = input.substring(commaIndex + 1).toInt();
+    }
+    else { // 콤마가 없는 경우
+      int single_command = input.toInt();
+      if (single_command == 3) {
+        if (single_movement < 70) {
+          single_movement ++;
+          ee_grip.write(single_movement);
+          delay(SWEEP_DELAY);
+        }
+      }
+      else if (single_command == 4) {
+        if (single_movement > 0) {
+          single_movement --;
+          ee_grip.write(single_movement);
+          delay(SWEEP_DELAY);
+        }
+      }
     }
   }
   

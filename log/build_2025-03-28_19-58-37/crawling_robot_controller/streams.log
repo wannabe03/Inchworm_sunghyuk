@@ -1,0 +1,31 @@
+[0.017s] Invoking command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20
+[0.174s] [35m[1mConsolidate compiler generated dependencies of target position_control[0m
+[0.174s] [ 50%] [32mBuilding CXX object CMakeFiles/position_control.dir/src/position_control.cpp.o[0m
+[1.605s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:[m[K In function ‘[01m[Kvoid path()[m[K’:
+[1.605s] [01m[K/home/sshyuk/ros2_ws/src/crawling_robot_controller/src/position_control.cpp:195:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<double, double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[1.605s]   195 |     if ([01;35m[Ktarget_index < points.size()[m[K)
+[1.605s]       |         [01;35m[K~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+[5.865s] [100%] [32m[1mLinking CXX executable position_control[0m
+[6.167s] [100%] Built target position_control
+[6.176s] Invoked command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --build /home/sshyuk/ros2_ws/build/crawling_robot_controller -- -j20 -l20
+[6.186s] Invoking command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --install /home/sshyuk/ros2_ws/build/crawling_robot_controller
+[6.194s] -- Install configuration: ""
+[6.194s] -- Execute custom install script
+[6.194s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/lib/crawling_robot_controller/position_control
+[6.194s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller//launch/robot_launch.py
+[6.195s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/ament_index/resource_index/package_run_dependencies/crawling_robot_controller
+[6.195s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/ament_index/resource_index/parent_prefix_path/crawling_robot_controller
+[6.195s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/environment/ament_prefix_path.sh
+[6.195s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/environment/ament_prefix_path.dsv
+[6.195s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/environment/path.sh
+[6.195s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/environment/path.dsv
+[6.196s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/local_setup.bash
+[6.196s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/local_setup.sh
+[6.196s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/local_setup.zsh
+[6.196s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/local_setup.dsv
+[6.196s] -- Symlinking: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/package.dsv
+[6.204s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/ament_index/resource_index/packages/crawling_robot_controller
+[6.204s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/cmake/crawling_robot_controllerConfig.cmake
+[6.204s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/cmake/crawling_robot_controllerConfig-version.cmake
+[6.205s] -- Up-to-date symlink: /home/sshyuk/ros2_ws/install/crawling_robot_controller/share/crawling_robot_controller/package.xml
+[6.206s] Invoked command in '/home/sshyuk/ros2_ws/build/crawling_robot_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sshyuk/ros2_ws/install/keyboard:/home/sshyuk/ros2_ws/install/crawling_sunghyuk:/opt/ros/humble /usr/bin/cmake --install /home/sshyuk/ros2_ws/build/crawling_robot_controller
